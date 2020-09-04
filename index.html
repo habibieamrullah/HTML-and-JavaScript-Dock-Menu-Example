@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Dock Menu</title>
+		<!-- Let me insert jQuery to this document. -->
+		<script src="jquery.js"></script>
+		
+		<!-- Now styling... -->
+		<style>
+			body{
+				background-color: black;
+				color: white;
+				padding: 20px;
+				font-family: arial;
+			}
+			
+			.pages{
+				display: none;
+			}
+			
+			#dockblock{
+				position: fixed;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin-left: 70px;
+				margin-right: 70px;
+				background-color: rgba(255, 255, 255, .9);
+				text-align: center;
+				border-top-left-radius: 50px;
+				border-top-right-radius: 50px;
+				backdrop-filter: blur(7px);
+			}
+			
+			.dockitem{
+				display: inline-block;
+			}
+		</style>
+	</head>
+	
+	<body>
+	
+		<!-- Lets make a Dock Menu with HTML and JavaScript -->
+		
+		<!-- Let's make the first page -->
+		<div class="pages page1">
+			<h1>
+				Computer
+			</h1>
+			<p>This is the first page</p>
+			<img src="icon1.png" width="50%">
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+		
+		<!-- now the second page -->
+		
+		<div class="pages page2">
+			<h1>
+				Star
+			</h1>
+			<p>This is the second page</p>
+			<img src="icon2.png" width="50%">
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+		
+		<!-- the third one -->
+		<div class="pages page3">
+			<h1>
+				Trash
+			</h1>
+			<p>This is the third page</p>
+			<img src="icon3.png" width="50%">
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+		
+		<!-- Here is the dock block -->
+		<div id="dockblock">
+			<!-- and make dock items, and make them clickable! -->
+			<div class="dockitem" onclick="showapage(1)">
+				<img src="icon1.png" width="256">
+			</div>
+			<div class="dockitem" onclick="showapage(2)">
+				<img src="icon2.png" width="256">
+			</div>
+			<div class="dockitem" onclick="showapage(3)">
+				<img src="icon3.png"width="256">
+			</div>
+		</div>
+		
+		<script>
+			//By default, pages are hidden.
+			
+			//Make a function to hide all the pages 
+			function hidepages(){
+				$(".pages").hide()
+			}
+			
+			//Make a function to show a page
+			function showapage(num){
+				console.log("Showing page number " + num)
+				//hide all pages first
+				hidepages()
+				//now show a page that I want
+				$(".page" + num).show()
+				
+			}
+			
+			//by default, let's show the first page
+			showapage(1)
+		</script>
+		
+	</body>
+	
+</html>
